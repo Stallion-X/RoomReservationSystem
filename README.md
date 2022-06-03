@@ -5,4 +5,4 @@
 
 使用Tomcat10部署
 
-![preview](./preview.png)
+![preview](./preview.jpg)
