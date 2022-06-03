@@ -1,0 +1,22 @@
+DROP TABLE IF EXISTS teachers;
+CREATE TABLE teachers(no VARCHAR(4) PRIMARY KEY, name VARCHAR(20));
+DROP TABLE IF EXISTS labrooms;
+CREATE TABLE labrooms(id INT PRIMARY KEY, name VARCHAR(20), description VARCHAR(20));
+DROP TABLE IF EXISTS reservations;
+CREATE TABLE reservations(id INT IDENTITY PRIMARY KEY, tno VARCHAR(4), labid INT, week INT, time INT);
+ALTER TABLE reservations add  foreign key(tno) references teachers(no);
+ALTER TABLE reservations add  foreign key(labid) references  labrooms(id);
+
+INSERT INTO teachers values('t001','李明');
+INSERT INTO teachers values('t002','张华');
+INSERT INTO teachers values('t003','王红');
+INSERT INTO teachers values('t004','陈丽');
+INSERT INTO labrooms values(1,'D301','软件实验室1');
+INSERT INTO labrooms values(2,'D302','软件实验室2');
+INSERT INTO labrooms values(3,'D401','硬件实验室1');
+INSERT INTO labrooms values(4,'D402','硬件实验室2');
+INSERT INTO reservations values(1,'t001',3,4,3); 
+INSERT INTO reservations values(2,'t004',3,4,4); 
+INSERT INTO reservations values(3,'t003',2,4,3); 
+INSERT INTO reservations values(4,'t002',1,4,3); 
+INSERT INTO reservations values(5,'t001',1,6,1); 
