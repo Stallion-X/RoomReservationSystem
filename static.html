@@ -1,0 +1,846 @@
+
+<!-- saved from url=(0052)http://localhost:8080/ReservationTest/WelcomeServlet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>机房预约页面</title>
+<link rel="stylesheet" type="text/css" href="./static_files/reservation.css">
+<script src="./static_files/jquery.min.js.下载"></script>
+<script type="text/javascript" src="./static_files/reservation.js.下载"></script>
+</head>
+<body>
+
+<div class="stat">
+<span>当前处于1号机房</span>
+<span>共</span>
+<span class="count-title" id="count-number" data-to="4" data-speed="50">4</span>
+<span>个</span>
+<span>机房</span>
+<span class="count-title" id="count-number" data-to="14" data-speed="50">14</span>
+<span>条</span>
+<span>预约记录</span>
+</div>
+<div class="content">
+<div class="title">欢迎进入机房预约系统</div>
+
+	<form action="http://localhost:8080/ReservationTest/WelcomeServlet" method="post">
+	<input type="hidden" name="Labid" value="1">
+	<input type="submit" class="lab" value="机房1">
+	</form>
+	
+	<form action="http://localhost:8080/ReservationTest/WelcomeServlet" method="post">
+	<input type="hidden" name="Labid" value="2">
+	<input type="submit" class="lab" value="机房2">
+	</form>
+	
+	<form action="http://localhost:8080/ReservationTest/WelcomeServlet" method="post">
+	<input type="hidden" name="Labid" value="3">
+	<input type="submit" class="lab" value="机房3">
+	</form>
+	
+	<form action="http://localhost:8080/ReservationTest/WelcomeServlet" method="post">
+	<input type="hidden" name="Labid" value="4">
+	<input type="submit" class="lab" value="机房4">
+	</form>
+	
+<table>
+	<tbody><tr class="hd">
+	<td>周一</td><td>周二</td><td>周三</td><td>周四</td><td>周五</td><td>周六</td><td>周日</td>
+	</tr><tr>
+	
+		</tr><tr>
+		
+			<td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="1">
+			<input type="hidden" name="week" value="1">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="1name1" value="">
+			
+				<input type="hidden" name="confirm" id="1confirm1" value="">
+				<input type="hidden" name="action" value="del">
+				
+				<button class="res" id="1 1" value="张华" onclick="delClick(1,1)"><span style="background: rgb(215,185,156);
+  background: linear-gradient(0deg, rgb(215,185,156) 0%, rgb(215,185,156) 100%);">选中！</span><span style="background: rgb(215,185,156);
+  background: linear-gradient(0deg, rgb(215,185,156) 0%, rgb(215,185,156) 100%);">张华</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="1">
+			<input type="hidden" name="week" value="2">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="1name2" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="1 2" onclick="resClick(1,2)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="1">
+			<input type="hidden" name="week" value="3">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="1name3" value="">
+			
+				<input type="hidden" name="confirm" id="1confirm3" value="">
+				<input type="hidden" name="action" value="del">
+				
+				<button class="res" id="1 3" value="李明" onclick="delClick(1,3)"><span style="background: rgb(215,185,156);
+  background: linear-gradient(0deg, rgb(215,185,156) 0%, rgb(215,185,156) 100%);">选中！</span><span style="background: rgb(215,185,156);
+  background: linear-gradient(0deg, rgb(215,185,156) 0%, rgb(215,185,156) 100%);">李明</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="1">
+			<input type="hidden" name="week" value="4">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="1name4" value="">
+			
+				<input type="hidden" name="confirm" id="1confirm4" value="">
+				<input type="hidden" name="action" value="del">
+				
+				<button class="res" id="1 4" value="李明" onclick="delClick(1,4)"><span style="background: rgb(215,185,156);
+  background: linear-gradient(0deg, rgb(215,185,156) 0%, rgb(215,185,156) 100%);">选中！</span><span style="background: rgb(215,185,156);
+  background: linear-gradient(0deg, rgb(215,185,156) 0%, rgb(215,185,156) 100%);">李明</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="1">
+			<input type="hidden" name="week" value="5">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="1name5" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="1 5" onclick="resClick(1,5)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="1">
+			<input type="hidden" name="week" value="6">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="1name6" value="">
+			
+				<input type="hidden" name="confirm" id="1confirm6" value="">
+				<input type="hidden" name="action" value="del">
+				
+				<button class="res" id="1 6" value="李明" onclick="delClick(1,6)"><span style="background: rgb(215,185,156);
+  background: linear-gradient(0deg, rgb(215,185,156) 0%, rgb(215,185,156) 100%);">选中！</span><span style="background: rgb(215,185,156);
+  background: linear-gradient(0deg, rgb(215,185,156) 0%, rgb(215,185,156) 100%);">李明</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="1">
+			<input type="hidden" name="week" value="7">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="1name7" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="1 7" onclick="resClick(1,7)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+		</td></tr><tr>
+		
+		</tr><tr>
+		
+			<td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="2">
+			<input type="hidden" name="week" value="1">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="2name1" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="2 1" onclick="resClick(2,1)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="2">
+			<input type="hidden" name="week" value="2">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="2name2" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="2 2" onclick="resClick(2,2)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="2">
+			<input type="hidden" name="week" value="3">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="2name3" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="2 3" onclick="resClick(2,3)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="2">
+			<input type="hidden" name="week" value="4">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="2name4" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="2 4" onclick="resClick(2,4)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="2">
+			<input type="hidden" name="week" value="5">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="2name5" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="2 5" onclick="resClick(2,5)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="2">
+			<input type="hidden" name="week" value="6">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="2name6" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="2 6" onclick="resClick(2,6)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="2">
+			<input type="hidden" name="week" value="7">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="2name7" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="2 7" onclick="resClick(2,7)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+		</td></tr><tr>
+		
+		</tr><tr>
+		
+			<td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="3">
+			<input type="hidden" name="week" value="1">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="3name1" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="3 1" onclick="resClick(3,1)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="3">
+			<input type="hidden" name="week" value="2">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="3name2" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="3 2" onclick="resClick(3,2)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="3">
+			<input type="hidden" name="week" value="3">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="3name3" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="3 3" onclick="resClick(3,3)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="3">
+			<input type="hidden" name="week" value="4">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="3name4" value="">
+			
+				<input type="hidden" name="confirm" id="3confirm4" value="">
+				<input type="hidden" name="action" value="del">
+				
+				<button class="res" id="3 4" value="张华" onclick="delClick(3,4)"><span style="background: rgb(215,185,156);
+  background: linear-gradient(0deg, rgb(215,185,156) 0%, rgb(215,185,156) 100%);">选中！</span><span style="background: rgb(215,185,156);
+  background: linear-gradient(0deg, rgb(215,185,156) 0%, rgb(215,185,156) 100%);">张华</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="3">
+			<input type="hidden" name="week" value="5">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="3name5" value="">
+			
+				<input type="hidden" name="confirm" id="3confirm5" value="">
+				<input type="hidden" name="action" value="del">
+				
+				<button class="res" id="3 5" value="李明" onclick="delClick(3,5)"><span style="background: rgb(215,185,156);
+  background: linear-gradient(0deg, rgb(215,185,156) 0%, rgb(215,185,156) 100%);">选中！</span><span style="background: rgb(215,185,156);
+  background: linear-gradient(0deg, rgb(215,185,156) 0%, rgb(215,185,156) 100%);">李明</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="3">
+			<input type="hidden" name="week" value="6">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="3name6" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="3 6" onclick="resClick(3,6)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="3">
+			<input type="hidden" name="week" value="7">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="3name7" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="3 7" onclick="resClick(3,7)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+		</td></tr><tr>
+		
+		</tr><tr>
+		
+			<td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="4">
+			<input type="hidden" name="week" value="1">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="4name1" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="4 1" onclick="resClick(4,1)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="4">
+			<input type="hidden" name="week" value="2">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="4name2" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="4 2" onclick="resClick(4,2)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="4">
+			<input type="hidden" name="week" value="3">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="4name3" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="4 3" onclick="resClick(4,3)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="4">
+			<input type="hidden" name="week" value="4">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="4name4" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="4 4" onclick="resClick(4,4)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="4">
+			<input type="hidden" name="week" value="5">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="4name5" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="4 5" onclick="resClick(4,5)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="4">
+			<input type="hidden" name="week" value="6">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="4name6" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="4 6" onclick="resClick(4,6)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="4">
+			<input type="hidden" name="week" value="7">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="4name7" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="4 7" onclick="resClick(4,7)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+		</td></tr><tr>
+		
+		</tr><tr>
+		
+			<td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="5">
+			<input type="hidden" name="week" value="1">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="5name1" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="5 1" onclick="resClick(5,1)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="5">
+			<input type="hidden" name="week" value="2">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="5name2" value="">
+			
+				<input type="hidden" name="confirm" id="5confirm2" value="">
+				<input type="hidden" name="action" value="del">
+				
+				<button class="res" id="5 2" value="李明" onclick="delClick(5,2)"><span style="background: rgb(215,185,156);
+  background: linear-gradient(0deg, rgb(215,185,156) 0%, rgb(215,185,156) 100%);">选中！</span><span style="background: rgb(215,185,156);
+  background: linear-gradient(0deg, rgb(215,185,156) 0%, rgb(215,185,156) 100%);">李明</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="5">
+			<input type="hidden" name="week" value="3">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="5name3" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="5 3" onclick="resClick(5,3)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="5">
+			<input type="hidden" name="week" value="4">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="5name4" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="5 4" onclick="resClick(5,4)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="5">
+			<input type="hidden" name="week" value="5">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="5name5" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="5 5" onclick="resClick(5,5)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="5">
+			<input type="hidden" name="week" value="6">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="5name6" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="5 6" onclick="resClick(5,6)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="5">
+			<input type="hidden" name="week" value="7">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="5name7" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="5 7" onclick="resClick(5,7)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+		</td></tr><tr>
+		
+		</tr><tr>
+		
+			<td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="6">
+			<input type="hidden" name="week" value="1">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="6name1" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="6 1" onclick="resClick(6,1)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="6">
+			<input type="hidden" name="week" value="2">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="6name2" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="6 2" onclick="resClick(6,2)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="6">
+			<input type="hidden" name="week" value="3">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="6name3" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="6 3" onclick="resClick(6,3)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="6">
+			<input type="hidden" name="week" value="4">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="6name4" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="6 4" onclick="resClick(6,4)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="6">
+			<input type="hidden" name="week" value="5">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="6name5" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="6 5" onclick="resClick(6,5)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="6">
+			<input type="hidden" name="week" value="6">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="6name6" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="6 6" onclick="resClick(6,6)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="6">
+			<input type="hidden" name="week" value="7">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="6name7" value="">
+			
+				<input type="hidden" name="confirm" id="6confirm7" value="">
+				<input type="hidden" name="action" value="del">
+				
+				<button class="res" id="6 7" value="李明" onclick="delClick(6,7)"><span style="background: rgb(215,185,156);
+  background: linear-gradient(0deg, rgb(215,185,156) 0%, rgb(215,185,156) 100%);">选中！</span><span style="background: rgb(215,185,156);
+  background: linear-gradient(0deg, rgb(215,185,156) 0%, rgb(215,185,156) 100%);">李明</span></button>
+				
+			</form>
+			
+			</td><td>
+		</td></tr><tr>
+		
+		</tr><tr>
+		
+			<td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="7">
+			<input type="hidden" name="week" value="1">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="7name1" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="7 1" onclick="resClick(7,1)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="7">
+			<input type="hidden" name="week" value="2">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="7name2" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="7 2" onclick="resClick(7,2)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="7">
+			<input type="hidden" name="week" value="3">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="7name3" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="7 3" onclick="resClick(7,3)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="7">
+			<input type="hidden" name="week" value="4">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="7name4" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="7 4" onclick="resClick(7,4)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="7">
+			<input type="hidden" name="week" value="5">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="7name5" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="7 5" onclick="resClick(7,5)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="7">
+			<input type="hidden" name="week" value="6">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="7name6" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="7 6" onclick="resClick(7,6)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="7">
+			<input type="hidden" name="week" value="7">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="7name7" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="7 7" onclick="resClick(7,7)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+		</td></tr><tr>
+		
+		</tr><tr>
+		
+			<td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="8">
+			<input type="hidden" name="week" value="1">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="8name1" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="8 1" onclick="resClick(8,1)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="8">
+			<input type="hidden" name="week" value="2">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="8name2" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="8 2" onclick="resClick(8,2)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="8">
+			<input type="hidden" name="week" value="3">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="8name3" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="8 3" onclick="resClick(8,3)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="8">
+			<input type="hidden" name="week" value="4">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="8name4" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="8 4" onclick="resClick(8,4)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="8">
+			<input type="hidden" name="week" value="5">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="8name5" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="8 5" onclick="resClick(8,5)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="8">
+			<input type="hidden" name="week" value="6">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="8name6" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="8 6" onclick="resClick(8,6)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+			<form action="http://localhost:8080/ReservationTest/ReservationServlet" method="post">
+			<input type="hidden" name="time" value="8">
+			<input type="hidden" name="week" value="7">
+			<input type="hidden" name="labid" value="1">
+			<input type="hidden" name="tname" id="8name7" value="">
+			
+				<input type="hidden" name="action" value="add">
+				
+				<button class="res" id="8 7" onclick="resClick(8,7)"><span>选中！</span><span>空闲</span></button>
+				
+			</form>
+			
+			</td><td>
+		</td></tr><tr>
+		
+</tr></tbody></table>
+</div>
+
+
+</body></html>
