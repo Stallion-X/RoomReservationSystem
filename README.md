@@ -10,6 +10,6 @@
 如需更改可至src/main/java/beans/ReservationBean.java第57-61行中修改数据库驱动（类型）及数据库位置。
 
 # 预览
-静态页面地址：https://stallion-x.github.io/ReservationTest/static.html
+静态页面地址：https://stallion-x.github.io/ReservationTest/
 
 ![preview](./preview.jpg)
