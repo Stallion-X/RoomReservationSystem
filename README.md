@@ -1,7 +1,7 @@
 # ReservationTest
 简易机房预约系统 拙作
 
-初次接触Servlet小实验做的简单玩意，好歹能看
+初次接触Servlet小实验做的简单玩意，勉强能看
 
 使用Tomcat10.0.17部署 在JDK16环境下通过测试
 
